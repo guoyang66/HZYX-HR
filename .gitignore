@@ -1,0 +1,22 @@
+# IDE/editor
+.idea/
+.vscode/
+
+# Dependencies/build
+front/node_modules/
+back/target/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Server logs/output
+server_err.txt
+server_out.txt
+
+# Private config
+back/src/main/resources/application-private.yml
+back-py/.env

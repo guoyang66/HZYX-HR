@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter+Tight:wght@400;500;600&display=swap');
+
+:root {
+  /* 明亮暖色现代主题 */
+  --bg: #f7f6f3;
+  --bg-2: #f0efeb;
+  --panel: #ffffff;
+  --panel-strong: #ffffff;
+  --primary: #f26b38; /* 珊瑚橙 */
+  --accent: #1c7c54;  /* 墨绿点缀 */
+  --text: #1f2d3d;
+  --muted: #60707f;
+  --border: #e5e6eb;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  --radius: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  font-family: 'Inter Tight', 'Space Grotesk', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: radial-gradient(circle at 20% 20%, rgba(242, 107, 56, 0.12), transparent 35%),
+    radial-gradient(circle at 80% 0%, rgba(28, 124, 84, 0.08), transparent 30%),
+    linear-gradient(180deg, #fbfbfb 0%, #f3f2ef 100%);
+  color: var(--text);
+}
+
+body {
+  background-attachment: fixed;
+}
+
+/* 滚动条样式 - 深色霓虹 */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e9eaed;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary), #f89e6f);
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(242, 107, 56, 0.2);
+}
+
+/* 链接样式 */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #33ffd8;
+}
+
+/* 页面过渡动画 */
+.page-enter {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 250ms ease, transform 250ms ease;
+}
+
+.page-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+/* 布局容器 */
+.app-shell {
+  background: transparent;
+}
+
+.app-sider {
+  background: var(--panel);
+  box-shadow: 4px 0 14px rgba(0, 0, 0, 0.08);
+  border-right: 1px solid var(--border);
+}
+
+.app-header {
+  background: linear-gradient(120deg, rgba(242, 107, 56, 0.12), rgba(28, 124, 84, 0.08));
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  color: var(--text);
+}
+
+.app-content {
+  margin: 24px;
+  padding: 24px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(4px);
+}
+
+.app-footer {
+  margin: 0;
+  padding: 16px 32px;
+  background: #f0efeb;
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.04);
+  color: var(--muted);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  letter-spacing: 0.01em;
+}
+
+.footer-brand {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.footer-copy {
+  font-size: 13px;
+}
+
+.logo-mark {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.06em;
+  color: var(--text);
+}
+
+/* Model Selector */
+.model-selector {
+  min-width: 160px;
+}
+
+.model-selector .ant-select-selector {
+  background: #fff !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: var(--text);
+}
+
+.model-selector .ant-select-arrow {
+  color: var(--text);
+}
+
+/* 通用卡片/按钮细节 */
+.glass-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(4px);
+}
+
+.ant-btn-primary {
+  background: linear-gradient(120deg, var(--primary), var(--accent));
+  border: none;
+  box-shadow: 0 8px 24px rgba(242, 107, 56, 0.25);
+}
+
+.ant-btn-default {
+  border-color: var(--border);
+  background: #fff;
+  color: var(--text);
+}
